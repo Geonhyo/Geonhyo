@@ -19,11 +19,15 @@
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-scroll": "^1.9.0",
     "tailwindcss": "3.3.3",
     "yarn": "^1.22.19"
   },
   "packageManager": "yarn@3.6.3",
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/react-scroll": "^1.8.10",
+    "tailwindcss-inner-border": "^0.2.0",
     "typescript": "5.0.4"
   }
 }

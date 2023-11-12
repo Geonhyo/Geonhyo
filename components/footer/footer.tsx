@@ -1,68 +1,54 @@
-import Image from "next/image";
-import HeaderLogo from "@/public/logo/header-logo.svg";
-import FooterNav from "@/components/footer/footer-nav";
-import FooterLinkButton from "@/components/footer/footer-link-button";
+"use client";
+import Link from "next/link";
 import EmailIcon from "@/public/icons/email.svg";
 import GithubIcon from "@/public/icons/github.svg";
-import FooterGuestMemoInput from "@/components/footer/footer-guest-memo-input";
+import NotionIcon from "@/public/icons/notion.svg";
 
 export default function Footer() {
   return (
-    <footer
-      id="footer"
-      className="w-screen flex flex-col items-center bg-background"
-    >
-      <div
-        id="footer-contact"
-        className="max-w-screen-xl h-[480px] px-9 flex flex-col justify-center items-center gap-6"
-      >
-        <p className="text-2xl font-bold text-center text-black">
-          Get In Touch
-        </p>
-        <div
-          id="footer-contact-link"
-          className="flex flex-row justify-center items-center gap-6"
+    <footer className="w-full max-w-full flex flex-col items-center px-9 py-8">
+      <h3 className="font-bold text-xl text-white mb-2">Contact</h3>
+      <div className="w-fit flex flex-row gap-2 lg:gap-4 mb-9">
+        <Link
+          href={"mailto:rjsgy0815@yonsei.ac.kr"}
+          title="Send Email to ME"
+          className="w-fit px-2 flex flex-row items-center gap-1 h-fit rounded-lg bg-white fill-black text-black border border-black hover:fill-neonGreen hover:text-neonGreen hover:bg-black hover:border-neonGreen"
         >
-          <FooterLinkButton
-            src={EmailIcon}
-            label="Email"
-            href="https://www.naver.com"
-          />
-          <FooterLinkButton
-            src={GithubIcon}
-            label="Github"
-            href="https://github.com/GeonhyoPark815"
-          />
-        </div>
-        <p className="text-2xl font-bold text-center text-black">
-          Geonhyo.com 에 방문해주셔서 감사합니다
-        </p>
-
-        <div
-          id="footer-guset-memo"
-          className="w-full flex flex-col items-center gap-2"
+          <EmailIcon className="w-6 h-6 fill-inherit" />
+          <p className="shrink-0 text-inherit font-bold">E-Mail</p>
+        </Link>
+        <Link
+          href={
+            "https://park-geonhyo.notion.site/4c07f6d33e924ab89ce10907cd3e75ea?pvs=4"
+          }
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Visit My Notion Page"
+          className="w-fit px-2 flex flex-row items-center gap-1 h-fit rounded-lg bg-white fill-black text-black border border-black hover:fill-neonGreen hover:text-neonGreen hover:bg-black hover:border-neonGreen"
         >
-          <FooterGuestMemoInput />
-          <p className="text-sm font-normal text-black text-center">
-            남겨주신 방명록 내용은 확인을 거쳐 배너에 노출됩니다
-          </p>
-        </div>
+          <NotionIcon className="w-6 h-6 fill-inherit" />
+          <p className="shrink-0 text-inherit font-bold">Notion</p>
+        </Link>
+        <Link
+          href={"https://github.com/GeonhyoPark815"}
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Visit My Github Page"
+          className="w-fit px-2 flex flex-row items-center gap-1 h-fit rounded-lg bg-white fill-black text-black border border-black hover:fill-neonGreen hover:text-neonGreen hover:bg-black hover:border-neonGreen"
+        >
+          <GithubIcon className="w-6 h-6 fill-inherit" />
+          <p className="shrink-0 text-inherit font-bold">Github</p>
+        </Link>
       </div>
-      <div
-        id="footer-bottom"
-        className="w-full px-9 py-4 flex flex-row items-center gap-10"
-      >
-        <Image
-          id="main header-logo"
-          src={HeaderLogo}
-          alt="Geonhyo"
-          title="박건효님의 개인 웹페이지입니다"
-          className="w-25 h-full"
-        />
-        <FooterNav />
-        <p className="shrink-0 text-xs font-normal text-black">
-          Copyright 2023. 박건효 All pictures and contents cannot be copied
-          without permission
+      <div className="w-full max-w-full flex flex-wrap gap-2 justify-between items-center">
+        <Link href={"/"}>
+          <p className="w-fit shrink-0 text-xs font-bold hover:text-neonGreen">
+            GEONHYO.COM
+          </p>
+        </Link>
+        <p className="w-fit shrink-0 text-xs text-end">
+          Copyright 2023. PARK GEONHYO. All pictures and contents cannot be
+          copied without permission
         </p>
       </div>
     </footer>

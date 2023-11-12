@@ -1,16 +1,30 @@
 const DateUtil = {
+  dateToElapsedString: (date: Date): string => {
+    const data = new Date(date);
+    const now = new Date();
+    const elapsedSec = (now.getTime() - data.getTime()) / 1000;
+    if (elapsedSec < 60) {
+      return `${Math.floor(elapsedSec)}초 전`;
+    } else if (elapsedSec < 60 * 60) {
+      return `${Math.floor(elapsedSec / 60)}분 전`;
+    } else if (elapsedSec < 60 * 60 * 24) {
+      return `${Math.floor(elapsedSec / (60 * 24))}시간 전`;
+    } else {
+      return DateUtil.dateToYMDString(data);
+    }
+  },
   dateToYMDString: (date: Date): string => {
     const data = new Date(date);
     const year = data.getFullYear();
     const month = ("0" + (data.getMonth() + 1)).slice(-2);
     const day = ("0" + data.getDate()).slice(-2);
-    return year + "." + month + "." + day;
+    return year + "-" + month + "-" + day;
   },
   dateToYMString: (date: Date): string => {
     const data = new Date(date);
     const year = data.getFullYear();
     const month = ("0" + (data.getMonth() + 1)).slice(-2);
-    return year + "." + month;
+    return year + "-" + month;
   },
   getYMDiff: (startedAt: Date, endedAt?: Date): string => {
     const start = new Date(startedAt);

@@ -49,11 +49,15 @@ const config: Config = {
         yellow: "#FFE81E",
         white: "#F9F9F9",
         black: "#2A3545",
+        lightBlack: "#4C6181",
         light: "#FFFFFF",
         dark: "#000000",
+        neonGreen: "#21FC0D",
+        neonLime: "#CCFF00",
+        neonPink: "#FF1694",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-inner-border")],
 };
 export default config;
