@@ -9,7 +9,7 @@ const educations: Education[] = [
   {
     year: 2017,
     main: "연세대학교 전기전자공학부",
-    sub: "2024.06 졸업 예정",
+    sub: "2024.08 졸업 예정",
   },
 ];
 
