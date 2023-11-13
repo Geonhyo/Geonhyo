@@ -8,10 +8,10 @@ export default function MainBanner() {
       id="banner"
       className="w-screen h-screen flex flex-col justify-center items-center gap-2"
     >
-      <h1 className="z-10 text-5xl md:text-6xl lg:text-7xl font-bold">
+      <h1 className="z-10 text-4xl md:text-5xl lg:text-7xl font-bold">
         GEONHYO.COM
       </h1>
-      <h2 className="z-10 text-xl md:text-2xl lg:text-3xl font-light tracking-widest">
+      <h2 className="z-10 text-lg md:text-xl lg:text-3xl font-light tracking-widest">
         Frontend Developer
       </h2>
       <MainBannerDownButton />

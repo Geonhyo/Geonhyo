@@ -40,15 +40,16 @@ export default function Footer() {
           <p className="shrink-0 text-inherit font-bold">Github</p>
         </Link>
       </div>
-      <div className="w-full max-w-full flex flex-wrap gap-2 justify-between items-center">
+      <div className="w-full max-w-full flex flex-col md:flex-row gap-2 justify-between items-center">
         <Link href={"/"}>
           <p className="w-fit shrink-0 text-xs font-bold hover:text-neonGreen">
             GEONHYO.COM
           </p>
         </Link>
-        <p className="w-fit shrink-0 text-xs text-end">
-          Copyright 2023. PARK GEONHYO. All pictures and contents cannot be
-          copied without permission
+        <p className="w-fit shrink-0 text-xs text-center md:text-end">
+          Copyright 2023. PARK GEONHYO.
+          <br />
+          All pictures and contents cannot be copied without permission
         </p>
       </div>
     </footer>
