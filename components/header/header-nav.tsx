@@ -6,7 +6,7 @@ export default function HeaderNav() {
   return (
     <nav className="w-fit flex flex-row gap-4 items-center rounded-xl px-4 py-2 bg-black border-2 border-white/30">
       <Link
-        href={"https://github.com/GeonhyoPark815"}
+        href={"https://github.com/Geonhyo"}
         rel="noopener noreferrer"
         target="_blank"
       >

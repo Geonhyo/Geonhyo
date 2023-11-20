@@ -30,7 +30,7 @@ export default function Footer() {
           <p className="shrink-0 text-inherit font-bold">Notion</p>
         </Link>
         <Link
-          href={"https://github.com/GeonhyoPark815"}
+          href={"https://github.com/Geonhyo"}
           rel="noopener noreferrer"
           target="_blank"
           title="Visit My Github Page"
